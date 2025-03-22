@@ -1,0 +1,64 @@
+// Simulating CPU frequency events based on time intervals
+#define LOW_FREQ_THRESHOLD     500     // Lower frequency threshold (in ms)
+#define MID_FREQ_THRESHOLD     300     // Middle frequency threshold (in ms)
+#define HIGH_FREQ_THRESHOLD    100     // High frequency threshold (in ms)
+
+// Action mappings for simulated frequencies
+#define START_FREQ    200
+#define PRINT_FREQ    400
+#define ADD_FREQ      600
+#define SUBTRACT_FREQ 800
+#define END_FREQ      1000
+
+// Example state variables for computation
+int memory = 0;
+
+// Function to simulate CPU frequency (using time intervals)
+int get_cpu_frequency() {
+    // Using system time as a proxy for frequency
+    int time_ms = GetTime();  // GetTime() gives current time in milliseconds since boot
+    int frequency = time_ms % 1000;  // Modulo for cycling values
+    
+    // Map the time into frequency ranges (low, mid, high)
+    if (frequency < LOW_FREQ_THRESHOLD) {
+        return LOW_FREQ_THRESHOLD;   // Simulate a low frequency event
+    } else if (frequency < MID_FREQ_THRESHOLD) {
+        return MID_FREQ_THRESHOLD;   // Simulate a mid frequency event
+    } else {
+        return HIGH_FREQ_THRESHOLD;  // Simulate a high frequency event
+    }
+}
+
+// Function to process simulated frequency and execute corresponding command
+void process_frequency(int freq) {
+    if (freq == START_FREQ) {  // START
+        Print("Program started...\n");
+    } else if (freq == PRINT_FREQ) {  // PRINT
+        Print("Memory: %d\n", memory);
+    } else if (freq == ADD_FREQ) {  // ADD
+        memory += 10;
+        Print("Added 10. New memory value: %d\n", memory);
+    } else if (freq == SUBTRACT_FREQ) {  // SUBTRACT
+        memory -= 5;
+        Print("Subtracted 5. New memory value: %d\n", memory);
+    } else if (freq == END_FREQ) {  // END
+        Print("Program ended.\n");
+    } else {
+        Print("Unknown frequency: %d\n", freq);
+    }
+}
+
+// Simulate a sequence of CPU frequency-based events
+void run_program() {
+    // Run the program while checking simulated CPU frequencies
+    for (int i = 0; i < 10; ++i) {
+        int cpu_freq = get_cpu_frequency();
+        process_frequency(cpu_freq);  // Process the simulated CPU frequency
+        Delay(1000);  // Simulate delay (in milliseconds)
+    }
+}
+
+// Main entry point
+void main() {
+    run_program();
+}
