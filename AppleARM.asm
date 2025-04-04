@@ -21,17 +21,17 @@ timespec:      .quad 1        // tv_sec = 1 second
 // int get_cpu_frequency()
 get_cpu_frequency:
     bl _mach_absolute_time       // returns uptime in nanoseconds in x0
-    mov x1, #1000000000
-    udiv x0, x0, x1              // Convert to seconds
+    mov x1, #1000000000          // Move lower 32-bit value into x1
+    ubfx x2, x0, #0, #32         // Extract the lower 32 bits from x0 (nanoseconds to seconds)
+    udiv x0, x2, x1              // Convert nanoseconds to seconds (x0 = uptime in seconds)
     mov x1, #1000
-    udiv x0, x0, x1              // Convert to milliseconds
-    mov x1, #1000
-    udiv x2, x0, x1              // x2 = seconds, remainder in x3
-    msub x3, x2, x1, x0          // x3 = x0 - (x2 * 1000) = x0 % 1000
+    udiv x2, x0, x1              // Convert seconds to milliseconds
+    mov x3, x0                   // Save seconds in x3
+    msub x0, x2, x1, x3          // x0 = x2 * 1000 + remainder (milliseconds)
 
-    cmp x3, #500
+    cmp x0, #500
     blt .low
-    cmp x3, #300
+    cmp x0, #300
     blt .mid
 
     mov x0, #100
