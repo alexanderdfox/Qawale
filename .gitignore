@@ -1,0 +1,56 @@
+# Build artifacts
+bin/
+*.o
+*.a
+*.so
+*.dylib
+*.exe
+
+# Compiled binaries
+qawale-*
+*.out
+
+# Object files
+*.obj
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+
+# Temporary files
+*.tmp
+*.log
+*.bak
+*.orig
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+
+# Backup files
+*.backup
+*.old
+
+# Test outputs
+test-results/
+*.test
+
