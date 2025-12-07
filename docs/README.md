@@ -4,6 +4,7 @@ This directory contains additional documentation for the Qawale project.
 
 ## Contents
 
+- **[purpose.md](purpose.md)** - Purpose, applications, and use cases for Qawale
 - Additional design documents
 - Architecture specifications
 - Tutorial guides
@@ -22,5 +23,5 @@ Feel free to add documentation here! Examples of useful additions:
 
 ---
 
-*This directory is currently empty. Documentation contributions are welcome!*
+*Documentation contributions are welcome!*
 
