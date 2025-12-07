@@ -85,6 +85,8 @@ process_frequency:
     stp x29, x30, [sp, #-16]!
     mov x29, sp
 
+    cmp x0, #0
+    beq .end        // END: Frequency wraps to 0 when cycle completes
     cmp x0, #200
     beq .start
     cmp x0, #400
@@ -93,8 +95,6 @@ process_frequency:
     beq .add
     cmp x0, #800
     beq .sub
-    cmp x0, #1000
-    beq .end
 
     // Unknown frequencies are silently ignored (no action)
     b .done

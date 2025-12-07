@@ -31,7 +31,7 @@ The language uses time-based simulation to generate frequency values. These freq
 - **PRINT** (400ms): Print memory value
 - **ADD** (600ms): Add 10 to memory
 - **SUBTRACT** (800ms): Subtract 5 from memory
-- **END** (1000ms): Program termination
+- **END** (0ms): Program termination (frequency wraps to 0 when cycle completes)
 
 ## Implementations
 

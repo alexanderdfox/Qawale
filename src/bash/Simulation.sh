@@ -39,7 +39,7 @@ readonly START_FREQ=200
 readonly PRINT_FREQ=400
 readonly ADD_FREQ=600
 readonly SUBTRACT_FREQ=800
-readonly END_FREQ=1000
+readonly END_FREQ=0  # Frequency wraps to 0 when cycle completes
 
 # Program state
 memory=0

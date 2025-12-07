@@ -35,7 +35,7 @@
 #define PRINT_FREQ    400
 #define ADD_FREQ      600
 #define SUBTRACT_FREQ 800
-#define END_FREQ      1000
+#define END_FREQ      0  // Frequency wraps to 0 when cycle completes
 
 // Program state
 int memory = 0;
