@@ -14,6 +14,33 @@ This document outlines the planned features, improvements, and milestones for th
 - [x] Build system (Makefile)
 - [x] Documentation (README)
 - [x] BSD 3-Clause License
+- [x] Project structure organization
+- [x] Bug fixes (END_FREQ fix)
+
+## 2026 Focus: Core Language Expansion
+
+### Priority Goals for 2026
+The year 2026 will focus on expanding the core language capabilities and building the foundation for more advanced features:
+
+**Q1 2026: Enhanced Instructions**
+- Expand instruction set with arithmetic and comparison operations
+- Add basic control flow capabilities
+- Improve language expressiveness
+
+**Q2 2026: Memory System**
+- Implement multiple registers
+- Add memory arrays
+- Enable more complex data structures
+
+**Q3 2026: Real Frequency Integration**
+- Transition from simulated to real CPU frequency monitoring
+- Build cross-platform frequency abstraction
+- Create debugging and visualization tools
+
+**Q4 2026: Compiler Foundation**
+- Design Qawale source language syntax
+- Build lexer and parser
+- Create basic code generation
 
 ## Phase 2: Enhanced Instruction Set
 
@@ -32,7 +59,7 @@ This document outlines the planned features, improvements, and milestones for th
   - [ ] PUSH, POP
   - [ ] Stack-based computation
 
-### Target Completion: Q2 2025
+### Target Completion: Q1 2026
 
 ## Phase 3: Multiple Memory Registers
 
@@ -43,7 +70,7 @@ This document outlines the planned features, improvements, and milestones for th
 - [ ] Memory array support
 - [ ] Variable declarations
 
-### Target Completion: Q3 2025
+### Target Completion: Q2 2026
 
 ## Phase 4: Real CPU Frequency Monitoring
 
@@ -56,7 +83,7 @@ This document outlines the planned features, improvements, and milestones for th
 - [ ] Frequency visualization/debugging tools
 - [ ] Performance profiling
 
-### Target Completion: Q4 2025
+### Target Completion: Q3 2026
 
 ## Phase 5: Qawale Compiler
 
@@ -69,7 +96,7 @@ This document outlines the planned features, improvements, and milestones for th
 - [ ] Standard library
 - [ ] Package/module system
 
-### Target Completion: Q1 2026
+### Target Completion: Q4 2026
 
 ## Phase 6: Development Tools
 
@@ -82,7 +109,7 @@ This document outlines the planned features, improvements, and milestones for th
 - [ ] Language server protocol (LSP) support
 - [ ] Testing framework
 
-### Target Completion: Q2 2026
+### Target Completion: Q1 2027
 
 ## Phase 7: Advanced Features
 
@@ -96,7 +123,7 @@ This document outlines the planned features, improvements, and milestones for th
 - [ ] Network programming support
 - [ ] File system operations
 
-### Target Completion: Q3-Q4 2026
+### Target Completion: Q2-Q3 2027
 
 ## Phase 8: Ecosystem & Community
 
@@ -148,5 +175,5 @@ We welcome contributions! Areas where help is especially needed:
 
 ---
 
-*Last updated: December 2024*
+*Last updated: December 2025*
 
