@@ -1,3 +1,5 @@
+https://www.youtube.com/shorts/yBH1DbpbLpk 
+
 # Qawale
 
 A frequency-based programming language that executes commands based on simulated CPU frequency values.
